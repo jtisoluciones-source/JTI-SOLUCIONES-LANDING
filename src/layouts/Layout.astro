@@ -1,0 +1,68 @@
+---
+import "@/styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import Footer from "@/components/layout/Footer.astro";
+import Header from "@/components/layout/Header.astro";
+interface Props {
+  title: string;
+  description: string;
+}
+const { description, title } = Astro.props;
+const { currentLocale } = Astro;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/jti.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="color-scheme" content="light" />
+    <meta name="robots" content="nofollow, noindex" />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+
+  <body class="relative">
+    <div class="absolute top-0 -z-10 h-full w-full bg-[#F9F3E9]">
+      <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(125%_125%_at_50%_10%,#F9F3E9_40%,#48c2f1_100%)]"></div>
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: rgba(17, 17, 17, 0.9);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+</style>

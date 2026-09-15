@@ -1,0 +1,42 @@
+---
+import Badge from "@/components/Badge.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Timeline from "@/pages/process/Timeline.astro";
+import BentoProcess from "@/pages/process/BentoProcess.astro";
+import Cta from "./process/Cta.astro";
+
+---
+
+<Layout
+  title="Procesos de JTI"
+  description="Descubre los procesos que JTI utiliza para ofrecer soluciones de calidad a sus clientes. Aprende cómo nuestros métodos eficientes y nuestras prácticas innovadoras contribuyen a tu éxito comercial."
+>
+  <main class="mt-32">
+    <SectionContainer id="proceso" class="gap-6">
+      <Badge id="proceso" title="METODOLOGÍA AGILE" />
+      <h1 class="text-4xl font-bold text-center text-[#260700]">
+        Nuestro Proceso
+      </h1>
+      <p
+        class="mx-auto max-w-prose text-center text-lg leading-8 text-gray-600 rounded-lg font-medium italic"
+      >
+        Transformamos desafíos complejos en soluciones digitales robustas
+        mediante un flujo de trabajo estructurado, transparente y orientado a
+        resultados.
+      </p>
+    </SectionContainer>
+    <SectionContainer
+      id="timeline"
+      class="mt-16 w-full bg-[#FDFBF9] rounded-lg shadow-lg p-8"
+    >
+      <Timeline />
+    </SectionContainer>
+    <SectionContainer id="bento" class="mt-32 gap-6">
+      <BentoProcess />
+    </SectionContainer>
+    <SectionContainer id="CTA" class="mt-32">
+      <Cta />
+    </SectionContainer>
+  </main></Layout
+>

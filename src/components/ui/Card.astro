@@ -1,0 +1,22 @@
+---
+import PalomitaCirculo from "@/assets/icons/PalomitaCirculo.astro";
+const { titulo, descripcion, items } = Astro.props;
+---
+
+<section class="bg-gray-50 rounded-xl p-[7%]">
+    <div>
+        <slot name="icono" />
+    </div>
+    <h2 class="font-bold mb-[4dvh] text-xl mt-[4dvh]">{titulo}</h2>
+    <p>{descripcion}</p>
+    <ul class="mt-[4dvh]">
+        {
+            items.map((item: any) => (
+                <li class="font-medium flex items-center gap-[6pt]">
+                    <PalomitaCirculo />
+                    {item}
+                </li>
+            ))
+        }
+    </ul>
+</section>

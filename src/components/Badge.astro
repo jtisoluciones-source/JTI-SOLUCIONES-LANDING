@@ -1,0 +1,8 @@
+---
+const { id, title, icon, class:className } = Astro.props;
+---
+
+<span id={id} class=`inline-flex bg-[#E9531C]/15 px-3 py-1.5 rounded-full ${className}`>
+    {icon && <span class="mr-2">{icon}</span>}
+  <span class="text-[#E9531C] font-bold tracking-widest text-xs">{title}</span>
+</span>

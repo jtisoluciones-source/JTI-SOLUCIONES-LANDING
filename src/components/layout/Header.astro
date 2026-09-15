@@ -1,0 +1,51 @@
+---
+import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
+---
+
+<!-- <nav class="fixed top-0 left-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200"> -->
+<nav
+  class="fixed top-0 left-0 w-full z-50 bg-[#F9F3E9]-50/80 backdrop-blur-md border-b border-stone-200"
+>
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-1 font-bold text-2xl text-stone-900">
+      <a href="/" class="flex items-center gap-1">
+        <Logo class="w-28 h-auto p-2 m-2" />
+      </a>
+    </div>
+
+    <div class="flex items-center gap-8 text-stone-700 font-medium">
+      <!-- <a href="#" class="text-sky-500 border-b-2 border-sky-500 pb-1">Servicios</a> UTILIZAR COMO HOVER EL SKY-->
+      <a
+        href="/servicios"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Servicios</a
+      >
+      <a
+        href="/proceso"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Proceso</a
+      >
+      <a
+        href="/tecnologias"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Tecnologías</a
+      >
+      <a
+        href="/beneficios"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Beneficios</a
+      >
+      <a
+        href="/soluciones"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Soluciones</a
+      >
+    </div>
+
+    <button
+      class="bg-[#260700] text-white px-6 py-2.5 rounded-xl hover:bg-[#3a0f00] transition-all font-medium"
+    >
+      Contactar
+    </button>
+  </div>
+</nav>

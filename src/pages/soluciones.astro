@@ -1,0 +1,195 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components/Badge.astro";
+import FeatureBlock from "@/components/ui/FeatureBlock.astro";
+import SyncFailIcon from "@/assets/icons/SyncFailIcon.astro";
+import NotAuthIcon from "@/assets/icons/NotAuthIcon.astro";
+import SpeedometerIcon from "@/assets/icons/SpeedometerIcon.astro";
+import ConectAdvIcon from "@/assets/icons/ConectAdvIcon.astro";
+import WarningIcon from "@/assets/icons/WarningIcon.astro";
+---
+
+<Layout
+    title="Soluciones de JTI"
+    description="Explora los servicios que JTI ofrece a sus clientes, diseñados para satisfacer las necesidades de la industria del tabaco. Descubre cómo nuestras soluciones innovadoras pueden ayudarte a alcanzar tus objetivos comerciales."
+>
+    <main class="pt-20">
+        <div class="mx-auto text-center">
+            <Badge
+                id="diagnostico-avanzado"
+                title="DIAGNOSTICO AVANZADO"
+                class="block mx-auto w-fit mb-4 mt-[10vmin]"
+            />
+            <h2 class="text-7xl font-bold text-[#260700]">
+                Desafios Operativos y
+            </h2>
+            <h2
+                class="text-7xl font-bold bg-gradient-to-r from-[#45B3EE] to-[#2E3DD4] bg-clip-text text-transparent animate-pulse pb-1"
+            >
+                Soluciones Estratégicas
+            </h2>
+            <p
+                class="mx-auto max-w-4xl text-center text-lg leading-8 text-gray-600 p-8 rounded-lg font-medium"
+            >
+                JTI identifica y resuelve los cuellos de botella técnicos
+                críticos que limitan el crecimiento de tu organización a través
+                de ingeniería de precisión.
+            </p>
+        </div>
+        <section class="flex gap-[1rem]">
+            <aside class="py-[3rem] pl-[3rem] pr-[1.5rem]">
+                <section class="bg-white rounded-xl p-[10%] mb-[7%]">
+                    <h2>Impacto Operativo</h2>
+                    <p>
+                        Implementando soluciones tecnológicas, reduces un
+                        <span class="font-bold">40%</span>
+                        costos operativos en el primer año.
+                    </p>
+                </section>
+                <section class="bg-white rounded-xl p-[10%] mb-[7%]">
+                    <h2>Gestión de nómina</h2>
+                    <ul class="list-disc ml-[1rem]">
+                        <li>
+                            <span class="font-bold">80%</span>
+                            menos errores en cálculos de nómina.
+                        </li>
+                        <li>
+                            Ahorro de <span class="font-bold">40%</span>
+                            en tiempo de procesamiento de nómina.
+                        </li>
+                    </ul>
+                </section>
+                <section class="bg-white rounded-xl p-[10%] mb-[7%]">
+                    <h2>Reducción de riesgos fiscales</h2>
+                    <p>
+                        Empresas que implementan sistemas de nómina reducen en
+                        <span class="font-bold">60%</span> el riesgo de sanciones
+                        fiscales.
+                    </p>
+                </section>
+            </aside>
+            <section
+                class="grid grid-cols-2 gap-[2rem] py-[3rem] pr-[3rem] pr-[1.5rem]"
+            >
+                <FeatureBlock
+                    titulo="FALLAS DE SINCRONIZACIÓN"
+                    tituloSolucion="SOLUCIÓN JTI"
+                    textoSolucion={`Implementación de protocolos de redundancia y
+                        bases de datos distribuidas con validación de
+                        integridad en tiempo real.`}
+                    IconTitle={SyncFailIcon}
+                >
+                    <h4
+                        class="text-orange-500 font-black flex items-center gap-[7pt]"
+                    >
+                        <WarningIcon />
+                        SÍNTOMAS
+                    </h4>
+                    <ul class="list-disc mx-[1rem]">
+                        <li>Discrepancia de datos entre sucursales.</li>
+                        <li>Pérdidad intermitente de registros críticos.</li>
+                    </ul>
+                </FeatureBlock>
+                <FeatureBlock
+                    titulo="INCIDENCIAS DE ASISTENCIA"
+                    tituloSolucion="SOLUCIÓN JTI"
+                    textoSolucion={`Plataforma de monitoreo automatizado con sistema
+                        de tickets inteligente y escalamiento automático
+                        basado en SLAs.`}
+                    IconTitle={NotAuthIcon}
+                >
+                    <h4
+                        class="text-orange-500 font-black flex items-center gap-[7pt]"
+                    >
+                        <WarningIcon />
+                        SÍNTOMAS
+                    </h4>
+                    <ul class="list-disc mx-[1rem]">
+                        <li>Reportes manuales inconsistentes.</li>
+                        <li>
+                            Tiempo de respuesta de soporte técnico excedido.
+                        </li>
+                    </ul>
+                </FeatureBlock>
+                <FeatureBlock
+                    titulo="LENTITUD DE SERVIDORES"
+                    tituloSolucion="SOLUCIÓN JTI"
+                    textoSolucion={`Optimización de arquitectura Cloud y On-premise,
+                        balanceo de carga avanzado y tuning de base de
+                        datos para alto rendimiento.`}
+                    IconTitle={SpeedometerIcon}
+                >
+                    <h4
+                        class="text-orange-500 font-black flex items-center gap-[7pt]"
+                    >
+                        <WarningIcon />
+                        SÍNTOMAS
+                    </h4>
+                    <ul class="list-disc mx-[1rem]">
+                        <li>Latencia excesiva en carga de aplicaciones.</li>
+                        <li>
+                            Cuellos de botella en el procesamiento de datos.
+                        </li>
+                    </ul>
+                </FeatureBlock>
+                <FeatureBlock
+                    titulo="ERRORES DE RED/CONFIGURACIÓN"
+                    tituloSolucion="SOLUCIÓN JTI"
+                    textoSolucion={`Reestructuración de topología de red,
+                        segmentación VLAN y despliegue de firewalls de
+                        última generación para tráfico seguro.`}
+                    IconTitle={ConectAdvIcon}
+                >
+                    <h4
+                        class="text-orange-500 font-black flex items-center gap-[7pt]"
+                    >
+                        <WarningIcon />
+                        SÍNTOMAS
+                    </h4>
+                    <ul class="list-disc mx-[1rem]">
+                        <li>
+                            Desconexiones imprevistas de estaciones de trabajo.
+                        </li>
+                        <li>
+                            Conflictos de IPs y vulnerabilidades de seguridad
+                            expuestas.
+                        </li>
+                    </ul>
+                </FeatureBlock>
+            </section>
+        </section>
+        <section class="flex bg-white max-w-[92.2%] justify-self-anchor-center">
+            <div>
+                <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFKocmmqxpWGV3w_173epd3hcWwiDhvMR4sSHEHv1y7gI0o8xYkODUKJnXe69rfczAC3DCjJnbNh06ao4gzXsaRgGa9aal3l4j8NbzI4AnFdsPXlrrcQD_94Strw1b80Lo7CKiH1CThCCVf9e5VwmGAtfbd3QSO-iRRZX8CSjz_ifkALKdvwNNJgUklixsxCaHZzxpKTi6fHuCZn-QMg6FJCGtYOchzKZfz95Y2NGvVOkRyZXvlIW59jzWfyZUeQDb5ntqivSVkgk"
+                    alt="imagen"
+                    class="rounded-[20px]"
+                />
+            </div>
+            <div class="ml-[4%] py-[7%] w-[50%]">
+                <h2 class="text-3xl font-bold mb-[3rem]">
+                    ¿Listo para estabilizar su infraestructura?
+                </h2>
+                <p>
+                    Nuestros especialistas realizan una auditoría exhaustiva de
+                    sus sistemas actuales para identificar riesgos antes de que
+                    se conviertan en interrupciones de servicio.
+                </p>
+                <div class="flex gap-[2%] mt-[3rem]">
+                    <a
+                        ><button
+                            class="rounded-md font-semibold bg-orange-600 text-white px-[1rem] py-[1.7dvh] cursor-pointer"
+                            >Solicitar Auditoría</button
+                        ></a
+                    >
+                    <a
+                        ><button
+                            class="rounded-md font-semibold bg-white text-orange-500 border-2 border-orange-500 px-[1rem] py-[1.7dvh] cursor-pointer"
+                            >Ver Casos de Éxito</button
+                        ></a
+                    >
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

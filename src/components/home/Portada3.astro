@@ -1,0 +1,59 @@
+---
+import BulbIcon from "@/assets/icons/BulbIcon.astro";
+import StarsIcon from "@/assets/icons/StarsIcon.astro";
+import VelocityIcon from "@/assets/icons/VelocityIcon.astro";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-350 mx-auto">
+  <div
+    class="md:col-span-8 bg-[#FDFCF9] border border-[#E8E1D6] rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl transition-shadow group relative overflow-visible"
+  >
+  <StarsIcon class="absolute right-8 top-8 w-48 h-auto transition-opacity hover:opacity-50" />
+  <div class="max-w-md">
+      <h3 class="text-3xl font-semibold text-slate-900 mb-6">
+        Soluciones Escalables
+      </h3>
+      <p class="text-base text-slate-600">
+        Arquitecturas robustas diseñadas para crecer orgánicamente con su
+        organización, asegurando estabilidad y alto rendimiento en entornos de
+        alta demanda.
+      </p>
+    </div>
+    <div class="mt-4">
+      <img
+        class="w-full h-48 object-cover rounded-xl border border-slate-200/50 z-100"
+        data-alt="A sophisticated close-up of a high-end server rack with glowing soft purple and lavender blue status lights. The image conveys a clean, professional, and powerful technological infrastructure with extreme clarity and a minimalist SaaS aesthetic. Soft focus in the background creates depth, highlighting the precision engineering and modern hardware design."
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAhkkbRL38hiydjPoTWcK7xpTz5aZag147NpqBJZ68cvn09JyXEXVshCaaz0t5X2xLwVL-UBPQghjb8QaBrP0dS7gdb3QKERKnMK1W5AQIZNUH2Oa7igZUhF9TYn8UzPCVv7hAp7kvU7MXxJAHreODiWA59Ccr_Zsb_oLOS-pUPcouKJE5_cr2CTGTi2xkJVMWeDp0slxJT0tIanZPEsyTZqJ5vZzOZFsQM_1QBSnr4kUecycnFsmtriWszXB8zzxiKaqhyXCLnLU"
+      />
+    </div>
+  </div>
+  <!-- Secondary Small Cards Stack -->
+  <div class="md:col-span-4 flex flex-col gap-6">
+    <div
+      class="flex-1 bg-[#FDFCF9] border border-[#E8E1D6] rounded-3xl p-8 flex flex-col justify-center items-center text-center group hover:bg-[#FDFCF9]/80 transition-all"
+    >
+      <VelocityIcon class="w-12 h-auto text-white" />
+      <h4 class="text-xl font-semibold text-slate-700 mb-2">Optimización</h4>
+      <p class="text-sm text-orange-500">
+        Eficiencia máxima en cada línea de código.
+      </p>
+    </div>
+    <div
+      class="flex-1 bg-[#FDFCF9] border border-[#E8E1D6] rounded-3xl p-8 flex items-center gap-4 group"
+    >
+      <div class="flex-1">
+        <h4
+          class="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-2"
+        >
+          I+D Constante
+        </h4>
+        <p class="text-sm text-slate-600">
+          Exploramos nuevas fronteras tecnológicas.
+        </p>
+      </div>
+      <BulbIcon
+        class="w-12 h-auto text-slate-400 group-hover:rotate-12 transition-transform opacity-40"
+      />
+    </div>
+  </div>
+</div>

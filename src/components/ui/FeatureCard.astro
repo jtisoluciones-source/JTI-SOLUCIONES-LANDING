@@ -1,0 +1,10 @@
+---
+const { texto, className = "" } = Astro.props;
+---
+
+<section class={`rounded-md py-[1rem] px-[1dvw] ${className}`}>
+    <h2>
+        <slot name="titulo" />
+    </h2>
+    <p>{texto}</p>
+</section>

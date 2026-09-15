@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Portada from "@/components/home/Portada.astro";
+import Portada2 from "@/components/home/Portada2.astro";
+import Portada3 from "@/components/home/Portada3.astro";
+---
+
+<Layout
+  title="Portafolio de Servicios JTI"
+  description="Descubre el portafolio de servicios de JTI, una empresa líder en la industria del tabaco. Explora nuestras soluciones innovadoras y sostenibles para satisfacer las necesidades de nuestros clientes."
+>
+  <main class="px-4">
+    <SectionContainer id="init" class="gap-6 mt-44 mb-16">
+      <Portada />
+    </SectionContainer>
+    <SectionContainer id="services" class="gap-6 mb-16">
+      <Portada2 />
+    </SectionContainer>
+    <SectionContainer id="services" class="px-6 py-16 gap-6 mb-32">
+      <Portada3 />
+    </SectionContainer>
+  </main>
+</Layout>

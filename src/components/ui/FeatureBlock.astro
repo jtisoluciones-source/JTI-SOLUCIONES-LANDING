@@ -1,0 +1,30 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+import CheckIcon from "@/assets/icons/CHeckIcon.astro";
+
+const { titulo, tituloSolucion, textoSolucion, IconTitle } = Astro.props;
+---
+
+<div class="bg-white rounded-xl border-2 border-solid border-orange-200">
+    <div
+        class="flex items-center gap-[1dvw] p-[2rem] border-b-2 border-b-solid border-b-orange-200"
+    >
+        {IconTitle ? <IconTitle /> : null}
+        <h4 class="font-semibold">{titulo}</h4>
+    </div>
+    <div class="px-[2rem] mt-[2rem]">
+        <slot />
+    </div>
+    <FeatureCard
+        texto={textoSolucion}
+        className="bg-green-100 border-2 border-solid border-green-200 m-[2rem]"
+    >
+        <section
+            slot="titulo"
+            class="inline-flex items-center gap-[6pt] font-medium"
+        >
+            <CheckIcon />
+            <h4 class="font-black text-emerald-800">{tituloSolucion}</h4>
+        </section>
+    </FeatureCard>
+</div>

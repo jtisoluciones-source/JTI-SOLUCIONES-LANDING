@@ -1,0 +1,213 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Badge from "@/components/Badge.astro";
+import FlagIcon from "@/assets/icons/FlagIcon.astro";
+import RocketIcon from "@/assets/icons/RocketIcon.astro";
+import BulbIcon from "@/assets/icons/BulbIcon.astro";
+import GroupIcon from "@/assets/icons/GroupIcon.astro";
+import HandshakeIcon from "@/assets/icons/HandshakeIcon.astro";
+import VerifiedIcon from "@/assets/icons/VerifiedIcon.astro";
+import VisibilityIcon from "@/assets/icons/VisibilityIcon.astro";
+---
+
+<Layout
+  title="Quiénes Somos - JTI"
+  description="Descubre quiénes somos en JTI, una empresa líder en soluciones tecnológicas. Conoce nuestra misión, visión y valores que nos impulsan a transformar la industria del tabaco a través de la innovación y la excelencia técnica."
+>
+  <main class="mt-32">
+    <SectionContainer id="quienes-somos" class="gap-6">
+      <div class="container max-w-350 mx-auto px-4">
+        <Badge
+          id="quienes-somos"
+          title="Conoce JTI"
+          class="w-max inline-flex items-center justify-center"
+        />
+
+        <h1 class="text-left font-bold text-4xl md:text-5xl mt-6">
+          Impulsando el futuro empresarial
+        </h1>
+        <p
+          class="mt-6 text-lefttext-gray-700 text-md leading-relaxed max-w-prose"
+        >
+          Transformamos la complejidad técnica en ventaja competitiva,
+          construyendo puentes entre la visión de negocio y la ejecución
+          tecnológica de vanguardia.
+        </p>
+      </div>
+    </SectionContainer>
+    <SectionContainer id="bento" class="mt-32 gap-6">
+      <div class="container max-w-350 mx-auto px-4">
+        <!-- Bento Grid Section -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
+          <!-- Mission Card -->
+          <div
+            class="md:col-span-8 bg-[#FDFCF9] rounded-3xl p-10 shadow-sm border border-[#E8E1D6]/70 hover:shadow-md transition-shadow relative overflow-hidden group"
+          >
+            <RocketIcon
+              class="absolute right-8 top-8 w-48 h-auto group-hover:scale-110 transition-transform duration-500"
+            />
+
+            <div class="relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-[#E9531C]/10 flex items-center justify-center mb-6"
+              >
+                <FlagIcon class="w-6 h-6" />
+              </div>
+              <h2 class="text-4xl font-semibold mb-4">Nuestra Misión</h2>
+              <p class="text-slate-600 max-w-prose leading-relaxed">
+                Democratizar el acceso a tecnologías de alto impacto para
+                empresas en crecimiento, proporcionando soluciones de software
+                escalables, seguras y centradas en el usuario que optimicen cada
+                proceso interno.
+              </p>
+            </div>
+          </div>
+          <!-- Stats/Experience Card -->
+          <div
+            class="md:col-span-4 bg-[#260700] text-white rounded-3xl p-10 shadow-sm flex flex-col justify-between relative overflow-hidden"
+          >
+            <div
+              class="absolute -bottom-8 -right-8 w-48 h-48 bg-white/10 rounded-full blur-3xl"
+            >
+            </div>
+            <div class="relative z-10">
+              <h3 class="text-2xl font-semibold mb-8">Trayectoria Sólida</h3>
+              <div class="space-y-6">
+                <div>
+                  <span class="text-5xl font-bold block">+10</span>
+                  <span
+                    class="text-sm uppercase tracking-wider opacity-80 block"
+                  >
+                    Años de experiencia
+                  </span>
+                </div>
+                <div>
+                  <span class="text-5xl font-bold block">150+</span>
+                  <span
+                    class="text-sm uppercase tracking-wider opacity-80 block"
+                  >
+                    Proyectos finalizados
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-white/20">
+              <p class="text-sm italic">
+                "Construyendo confianza a través del código desde el primer
+                día."
+              </p>
+            </div>
+          </div>
+          <!-- Vision Card -->
+          <div
+            class="md:col-span-4 bg-white/95 rounded-3xl p-10 shadow-sm flex flex-col justify-center items-start border border-slate-200/70"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-[#E9531C]/10 flex items-center justify-center mb-6"
+            >
+              <VisibilityIcon class="w-6 h-auto"/>
+            </div>
+            <h2 class="text-2xl font-semibold mb-4">Nuestra Visión</h2>
+            <p class="text-base leading-relaxed text-slate-700">
+              Ser el socio tecnológico preferido para la transformación digital
+              global, reconocidos por nuestra integridad técnica y diseño
+              centrado en el humano.
+            </p>
+          </div>
+          <!-- Values Grid -->
+          <div
+            class="md:col-span-8 bg-white rounded-3xl p-10 shadow-sm border border-slate-200/70"
+          >
+            <h2 class="text-2xl font-semibold mb-8 text-center md:text-left">
+              Nuestros Valores Core
+            </h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="flex flex-col items-start text-left"
+              >
+                <div class="mb-2">
+                    <BulbIcon class="w-6 h-auto"/>
+                </div>
+                <span class="text-sm font-semibold block mb-2 text-slate-900">
+                  Innovación
+                </span>
+                <span class="text-sm text-slate-500">
+                  Buscamos siempre lo extraordinario.
+                </span>
+              </div>
+              <div
+                class="flex flex-col items-start text-left"
+              >
+                <div class="mb-2">
+                  <HandshakeIcon class="w-8 h-auto"/>
+                </div>
+                <span class="text-sm font-semibold block mb-2 text-slate-900">
+                  Confianza
+                </span>
+                <span class="text-sm text-slate-500">
+                  Relaciones honestas y duraderas.
+                </span>
+              </div>
+              <div
+                class="flex flex-col items-start text-left"
+              >
+                <div class="mb-2">
+                  <VerifiedIcon class="w-8 h-auto"/>
+                </div>
+                <span class="text-sm font-semibold block mb-2 text-slate-900">
+                  Excelencia
+                </span>
+                <span class="text-sm text-slate-500">
+                  Calidad sin compromisos técnicos.
+                </span>
+              </div>
+              <div
+                class="flex flex-col items-start text-left"
+              >
+                <div class="mb-2">
+                  <GroupIcon class="w-8 h-auto "/>
+                </div>
+                <span class="text-sm font-semibold block mb-2 text-slate-900">
+                  Agilidad
+                </span>
+                <span class="text-sm text-slate-500">
+                  Adaptación rápida al cambio.
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Tech Focus Image Card -->
+          <div
+            class="md:col-span-12 h-112 rounded-3xl overflow-hidden relative shadow-lg"
+          >
+            <img
+              alt="Tecnología e innovación"
+              class="w-full h-full object-cover"
+              data-alt="A cinematic, high-angle shot of a sleek, futuristic workspace with dual monitors showing complex code structures and data visualizations. The lighting is soft and professional, with a cool palette of blues and purples from LED accents, reflecting a high-performance corporate atmosphere. In the background, a large floor-to-ceiling window reveals a modern city skyline at dusk. The overall aesthetic is minimalist, clean, and technologically advanced."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKI96-KQhwqo1E3SOlfMsGv-h3G-fwiaR1ZJVQK83TD3jS2A5yMZlw2reUBUmJIgmM1-LqlYcRk1gGGUB54gxDu-AGkJ2C91S4l_bZj8YMIC6M2ZH205I1SwLhIp00DQxI8Gl4HjVNtmqY3JtcX5Vu9JVWAla2dCUsQSTO5--a5iy-a4Il0sicjMumpKM3Jpk0cnaOdEO0Hif3sfIE2Zvlpig9zYRDrS4dctriNlfl0Z3ZDmzurLmx3bhGN00IkGuyOohqAsNKPU8"
+            />
+            <div
+              class="absolute inset-0 bg-linear-to-r from-slate-950/80 to-transparent flex flex-col justify-center px-8 md:px-12"
+            >
+              <div class="max-w-xl text-white">
+                <span
+                  class="inline-block px-4 py-1.5 bg-sky-300/50 backdrop-blur rounded-full border border-sky-300 text-xs uppercase tracking-[0.18em] mb-4"
+                  >Enfoque Tecnológico</span
+                >
+                <h2 class="text-4xl font-semibold mb-4">
+                  Vanguardia en cada línea de código
+                </h2>
+                <p class="text-lg text-white/90">
+                  Utilizamos los frameworks más robustos y arquitecturas en la
+                  nube para asegurar que su negocio no solo funcione hoy, sino
+                  que esté preparado para la escala del mañana.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>

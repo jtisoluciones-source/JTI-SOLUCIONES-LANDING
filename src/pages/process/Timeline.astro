@@ -1,0 +1,175 @@
+---
+import SearchIcon from "@/assets/icons/SearchIcon.astro";
+import AnalitycsIcon from "@/assets/icons/AnalitycsIcon.astro";
+import PhoneIcon from "@/assets/icons/PhoneIcon.astro";
+import SettingsSuggestIcon from "@/assets/icons/SettingsSuggestIcon.astro";
+import SupportAgentIcon from "@/assets/icons/SupportAgentIcon.astro";
+import CharIcon from "@/assets/icons/CharIcon.astro";
+---
+
+<div class="max-w-6xl mx-auto">
+  <div class="relative">
+    <!-- Progress Line -->
+    <div class="absolute left-8 md:left-0 md:top-12 w-0.5 md:w-full h-full md:h-0.5 z-0">
+      <div
+        class="h-full w-full"
+        style="background: linear-gradient(90deg, transparent 0%, #E9531C 10%, #E9531C 90%, transparent 100%);"
+      >
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-8 relative z-10">
+      <!-- Step 1 -->
+      <div
+        class="flex flex-row md:flex-col items-start md:items-center gap-md group"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-[#E9531C] text-white hover:bg-[#f04101] flex items-center justify-center shrink-0 relative"
+        >
+          <span class="material-symbols-outlined" data-icon="search"
+            ><SearchIcon class="w-6 h-auto text-amber-300" /></span
+          >
+          <div
+            class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-[#E9531C] text-slate-500 flex items-center justify-center text-[10px] font-bold"
+          >
+            1
+          </div>
+        </div>
+        <div class="pt-sm md:pt-md md:text-center">
+          <h3 class="font-headline-md font-bold text-headline-md mb-xs mt-4">
+            Diagnóstico
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Identificamos los puntos críticos y objetivos estratégicos de su
+            negocio.
+          </p>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div
+        class="flex flex-row md:flex-col items-start md:items-center gap-md group"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-[#E0E3E5] text-white flex items-center justify-center shrink-0 border border-[#C7C4D7] hover:bg-[#C7C4D7] hover:text-white transition-colors relative"
+        >
+          <span class="material-symbols-outlined" data-icon="analytics"
+            ><AnalitycsIcon class="w-6 h-auto text-amber-300" /></span
+          >
+          <div
+            class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-gray-300 text-gray-600 flex items-center justify-center text-[10px] font-bold"
+          >
+            2
+          </div>
+        </div>
+        <div class="pt-sm md:pt-md md:text-center">
+          <h3 class="font-headline-md font-bold text-headline-md mb-xs mt-4">
+            Análisis
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Evaluamos la viabilidad técnica y diseñamos la arquitectura óptima.
+          </p>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div
+        class="flex flex-row md:flex-col items-start md:items-center gap-md group"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-[#E0E3E5] text-white flex items-center justify-center shrink-0 border border-[#C7C4D7] hover:bg-[#C7C4D7] hover:text-white transition-colors relative"
+        >
+          <span class="material-symbols-outlined" data-icon="developer_mode"
+            ><PhoneIcon class="w-6 h-auto text-amber-300" /></span
+          >
+          <div
+            class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-3 border-gray-300 text-gray-600 flex items-center justify-center text-[10px] font-bold"
+          >
+            3
+          </div>
+        </div>
+        <div class="pt-sm md:pt-md md:text-center">
+          <h3 class="font-headline-md font-bold text-headline-md mb-xs mt-4">
+            Implementación
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Desarrollo ágil bajo estándares de calidad y seguridad de alto
+            nivel.
+          </p>
+        </div>
+      </div>
+      <!-- Step 4 -->
+      <div
+        class="flex flex-row md:flex-col items-start md:items-center gap-md group"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-[#E0E3E5] text-white flex items-center justify-center shrink-0 border border-[#C7C4D7] hover:bg-[#C7C4D7] hover:text-white transition-colors relative"
+        >
+          <span class="material-symbols-outlined" data-icon="settings_suggest"
+            ><SettingsSuggestIcon class="w-6 h-auto text-amber-300" /></span
+          >
+          <div
+            class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-gray-300 text-gray-600 flex items-center justify-center text-[10px] font-bold"
+          >
+            4
+          </div>
+        </div>
+        <div class="pt-sm md:pt-md md:text-center">
+          <h3 class="font-headline-md font-bold text-headline-md mb-xs mt-4">
+            Configuración
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ajuste fino de parámetros y despliegue en entornos productivos.
+          </p>
+        </div>
+      </div>
+      <!-- Step 5 -->
+      <div
+        class="flex flex-row md:flex-col items-start md:items-center gap-md group"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-[#E0E3E5] text-white flex items-center justify-center shrink-0 border border-[#C7C4D7] hover:bg-[#C7C4D7] hover:text-white transition-colors relative"
+        >
+          <span class="material-symbols-outlined" data-icon="support_agent"
+            ><SupportAgentIcon class="w-6 h-auto text-amber-300" /></span
+          >
+          <div
+            class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-gray-300 text-gray-600 flex items-center justify-center text-[10px] font-bold"
+          >
+            5
+          </div>
+        </div>
+        <div class="pt-sm md:pt-md md:text-center">
+          <h3 class="font-headline-md font-bold text-headline-md mb-xs mt-4">
+            Soporte
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Acompañamiento continuo y resolución proactiva de incidencias.
+          </p>
+        </div>
+      </div>
+      <!-- Step 6 -->
+      <div
+        class="flex flex-row md:flex-col items-start md:items-center gap-md group"
+      >
+        <div
+          class="w-16 h-16 rounded-full bg-[#E0E3E5] text-white flex items-center justify-center shrink-0 border border-[#C7C4D7] hover:bg-[#C7C4D7] hover:text-white transition-colors relative"
+        >
+          <span class="material-symbols-outlined" data-icon="seguimiento"
+            ><CharIcon class="w-6 h-auto text-amber-300" /></span
+          >
+          <div
+            class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-gray-300 text-gray-600 flex items-center justify-center text-[10px] font-bold"
+          >
+            6
+          </div>
+        </div>
+        <div class="pt-sm md:pt-md md:text-center">
+          <h3 class="font-headline-md font-bold text-headline-md mb-xs mt-4">
+            Seguimiento
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Monitoreo de KPIs y optimización constante del rendimiento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

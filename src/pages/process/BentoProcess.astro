@@ -1,0 +1,123 @@
+---
+import SupportIcon from "@/assets/icons/SupportIcon.astro";
+import TrendingUp from "@/assets/icons/TrendingUp.astro";
+import BoltIcon from "@/assets/icons/BoltIcon.astro";
+import LockIcon from "@/assets/icons/LockIcon.astro";
+---
+
+<div class="max-w-340 mx-auto px-4">
+  <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+    <div class="max-w-4xl">
+      <h2 class="text-5xl font-semibold text-slate-900 mb-4 max-w-2xl">
+        Beneficios que impulsan su crecimiento
+      </h2>
+      <p class="text-slate-600 font-semibold text-lg">
+        Nuestro proceso no solo entrega soluciones técnicas, sino que también
+        Diseñamos soluciones que no solo resuelven problemas técnicos, sino que
+        potencian el valor estratégico de su organización.
+      </p>
+    </div>
+    <div class="flex gap-3">
+      <button
+        class="p-3 rounded-full border border-slate-300 hover:bg-slate-100 transition-colors"
+      >
+        <span class="material-symbols-outlined" data-icon="chevron_left"
+          >chevron_left</span
+        >
+      </button>
+      <button
+        class="p-3 rounded-full border border-slate-300 hover:bg-slate-100 transition-colors"
+      >
+        <span class="material-symbols-outlined" data-icon="chevron_right"
+          >chevron_right</span
+        >
+      </button>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    <!-- Card 1 -->
+    <div
+      class="md:col-span-2 lg:col-span-2 p-8 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm flex flex-col justify-between group hover:shadow-lg transition-all duration-300"
+    >
+      <div
+        class="w-12 h-12 rounded-lg bg-[#4648D4]/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"
+      >
+        <span class="material-symbols-outlined" data-icon="verified_user"
+          ><SupportIcon class="w-6 h-6" />
+        </span>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Soporte Especializado</h4>
+        <p class="text-sm text-slate-600">
+          Acceso directo a ingenieros senior comprometidos con la estabilidad de
+          su infraestructura 24/7.
+        </p>
+      </div>
+    </div>
+    <!-- Card 2 (Image + Content) -->
+    <div
+      class="md:col-span-2 lg:col-span-4 p-8 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm overflow-hidden relative group"
+    >
+      <div class="relative z-10 flex flex-col h-full justify-between max-w-sm">
+        <div
+          class="w-12 h-12 rounded-lg bg-[#8127CF]/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"
+        >
+          <span class="material-symbols-outlined" data-icon="trending_up"
+            ><TrendingUp class="w-6 h-6" /></span
+          >
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-3">Soluciones Escalables</h4>
+          <p class="text-sm text-slate-600">
+            Desarrollamos pensando en el mañana, asegurando que su tecnología
+            crezca al mismo ritmo que su negocio sin fricciones.
+          </p>
+        </div>
+      </div>
+      <img
+        alt="Equipo de ingeniería"
+        class="absolute top-0 right-0 h-full w-1/2 object-cover opacity-20 md:opacity-100 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
+        data-alt="A professional engineering team working in a high-tech office environment with large glass walls. Soft morning sunlight filters through the room, highlighting sleek computer monitors displaying complex code and data visualizations. The overall atmosphere is focused, clean, and modern, using a palette of light greys and deep blues to convey trust and expertise."
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr_5kwCkNxwesPSYNLZQn9o5hldVWjweNvb-AlSH9D1em2a8jhT72nAYr-_YNqUCcWAdWKQt1J08AzNdWTqsCGSVHCDWLkU-JAHsRw8JICFYhjGL8IgvdzOUfPOadE9h0Rslws1ujVBL203sS2hMNVbJOxmN_7Spop7B2S6iGI2NB1eNPNcLJpEWpyePk4SnRXQhc33BsGlCOW1Sf5EsRMiPZoQzM_x6BEta7JM6GLAzPemevAq5R-NdBXzIEt7VGlYeJRX0MRFr4"
+      />
+    </div>
+    <!-- Card 3 -->
+    <div
+      class="md:col-span-2 lg:col-span-3 p-8 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform"
+    >
+      <div
+        class="w-12 h-12 rounded-lg bg-emerald-600/10 flex items-center justify-center mb-8"
+      >
+        <span class="material-symbols-outlined" data-icon="bolt">
+          <BoltIcon class="w-6 h-6" />
+        </span>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Rendimiento Optimizado</h4>
+        <p class="text-sm text-slate-600">
+          Priorizamos la velocidad y la eficiencia en cada línea de código,
+          garantizando experiencias de usuario fluidas.
+        </p>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div
+      class="md:col-span-2 lg:col-span-3 p-8 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform"
+    >
+      <div
+        class="w-12 h-12 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mb-8"
+      >
+        <span class="material-symbols-outlined" data-icon="lock">
+          <LockIcon class="w-6 h-6" />
+        </span>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Seguridad de Grado Bancario</h4>
+        <p class="text-sm text-slate-600">
+          Implementamos los protocolos de seguridad más rigurosos para proteger
+          sus datos y la privacidad de sus clientes.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
