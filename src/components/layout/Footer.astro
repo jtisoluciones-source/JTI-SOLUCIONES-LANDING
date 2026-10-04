@@ -124,30 +124,28 @@
         </div>
       </div>
 
-      <div
-        class="lg:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-28 items-start"
-      >
+      <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 lg:gap-28 items-start">
         <!-- Products -->
         <div>
-          <h3 class="font-bold text-sm mb-4 text-[#48c2f1]">Servicios</h3>
-          <ul class="space-y-3 text-sm text-dark-300">
+          <h3 class="font-bold text-sm mb-4 text-[#48c2f1] flex items-center justify-between">
+            Servicios
+            <button type="button" class="lg:hidden ml-2 text-sm text-dark-300" aria-expanded="false" aria-controls="services-panel" data-toggle="services" aria-label="Mostrar servicios">+</button>
+          </h3>
+          <ul id="services-panel" class="space-y-3 text-sm text-dark-300" data-panel="services" aria-hidden="true">
             <li><a href="#" class="hover:text-slate-400">Desarrollo Web</a></li>
             <li><a href="#" class="hover:text-slate-400">Diseño UI/UX</a></li>
-            <li>
-              <a href="#" class="hover:text-slate-400"
-                >Consultoría Tecnológica</a
-              >
-            </li>
+            <li><a href="#" class="hover:text-slate-400">Consultoría Tecnológica</a></li>
           </ul>
         </div>
 
         <!-- Resources -->
         <div>
-          <h3 class="font-bold text-sm mb-4 text-[#e9531c]">Recursos</h3>
-          <ul class="space-y-3 text-sm text-dark-300">
-            <li>
-              <a href="#" class="hover:text-slate-400">JTI - SOLUCIONES</a>
-            </li>
+          <h3 class="font-bold text-sm mb-4 text-[#e9531c] flex items-center justify-between">
+            Recursos
+            <button type="button" class="lg:hidden ml-2 text-sm text-dark-300" aria-expanded="false" aria-controls="resources-panel" data-toggle="resources" aria-label="Mostrar recursos">+</button>
+          </h3>
+          <ul id="resources-panel" class="space-y-3 text-sm text-dark-300" data-panel="resources" aria-hidden="true">
+            <li><a href="#" class="hover:text-slate-400">JTI - SOLUCIONES</a></li>
             <li><a href="#" class="hover:text-slate-400">Templates</a></li>
             <li><a href="#" class="hover:text-slate-400">Components</a></li>
             <li><a href="#" class="hover:text-slate-400">Blogs</a></li>
@@ -157,16 +155,16 @@
 
         <!-- Company -->
         <div class="col-span-2 md:col-span-1">
-          <h3 class="font-bold text-sm mb-4 text-[#65696d]">Empresa</h3>
-          <ul class="space-y-3 text-sm text-dark-300">
+          <h3 class="font-bold text-sm mb-4 text-[#65696d] flex items-center justify-between">
+            Empresa
+            <button type="button" class="lg:hidden ml-2 text-sm text-dark-300" aria-expanded="false" aria-controls="company-panel" data-toggle="company" aria-label="Mostrar empresa">+</button>
+          </h3>
+          <ul id="company-panel" class="space-y-3 text-sm text-dark-300" data-panel="company" aria-hidden="true">
             <li><a href="#" class="hover:text-slate-400">Portafolio</a></li>
             <li><a href="#" class="hover:text-slate-400">Visión</a></li>
             <li class="flex items-center gap-2">
               <a href="#" class="hover:text-slate-400">Careers</a>
-              <span
-                class="text-[11px] px-2 py-0.5 rounded-full bg-green-950 border border-[#48c2f1] text-[#48c2f1]"
-                >HIRING</span
-              >
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-950 border border-[#48c2f1] text-[#48c2f1]">HIRING</span>
             </li>
             <li><a href="#" class="hover:text-slate-400">Privacy policy</a></li>
             <li><a href="#" class="hover:text-slate-400">Contacto</a></li>
@@ -186,11 +184,50 @@
         class="absolute inset-x-0 bottom-0 mx-auto w-full max-w-3xl h-full max-h-64 bg-[#48c2f1] rounded-full blur-[170px] pointer-events-none"
       >
       </div>
-      <h5
-        class="text-center font-extrabold leading-[0.7] text-transparent text-[clamp(1.5rem,7rem,7rem)] [-webkit-text-stroke:1px_#48c2f1] mt-6"
-      >
-        <>JTI </> &lbrace;...SOLUCIONES
+      <h5 class="text-center font-extrabold leading-[0.7] text-transparent mt-6 [-webkit-text-stroke:1px_#48c2f1] text-3xl sm:text-4xl md:text-5xl lg:text-[clamp(1.5rem,7rem,7rem)]">
+        <>JTI </> &lbrace;...SOLUCIONES{"}"}
       </h5>
     </div>
   </footer>
 </div>
+
+<script>
+  (function(){
+    const buttons = Array.from(document.querySelectorAll('[data-toggle]'));
+    buttons.forEach(btn=>{
+      if(!(btn instanceof HTMLElement)) return;
+      const target = btn.getAttribute('data-toggle');
+      const panel = document.querySelector(`[data-panel="${target}"]`);
+      if(!(panel instanceof HTMLElement)) return;
+      // start collapsed on small screens using hidden
+      if(window.innerWidth < 1024){
+        panel.hidden = true;
+        panel.setAttribute('aria-hidden','true');
+        btn.textContent = '+';
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        panel.hidden = false;
+        panel.setAttribute('aria-hidden','false');
+        btn.textContent = '';
+        btn.setAttribute('aria-expanded','false');
+      }
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.hidden = expanded; // if expanded was true, hide
+        panel.setAttribute('aria-hidden', String(expanded));
+        btn.textContent = expanded ? '+' : '-';
+      });
+    });
+    // on resize ensure panels visible on lg
+    window.addEventListener('resize', ()=>{
+      if(window.innerWidth >= 1024){
+        document.querySelectorAll('[data-panel]').forEach(p=>{ if(p instanceof HTMLElement){ p.hidden = false; p.setAttribute('aria-hidden','false'); } });
+        document.querySelectorAll('[data-toggle]').forEach(b=>{ if(b instanceof HTMLElement){ b.setAttribute('aria-expanded','false'); b.textContent=''; }});
+      } else {
+        document.querySelectorAll('[data-panel]').forEach(p=>{ if(p instanceof HTMLElement){ p.hidden = true; p.setAttribute('aria-hidden','true'); } });
+        document.querySelectorAll('[data-toggle]').forEach(b=>{ if(b instanceof HTMLElement){ b.setAttribute('aria-expanded','false'); b.textContent='+' }});
+      }
+    });
+  })();
+</script>

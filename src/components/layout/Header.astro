@@ -1,11 +1,7 @@
 ---
 import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
 ---
-
-<!-- <nav class="fixed top-0 left-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200"> -->
-<nav
-  class="fixed top-0 left-0 w-full z-50 bg-[#F9F3E9]-50/80 backdrop-blur-md border-b border-stone-200"
->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#F9F3E9]-50/80 backdrop-blur-md border-b border-stone-200">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <div class="flex items-center gap-1 font-bold text-2xl text-stone-900">
       <a href="/" class="flex items-center gap-1">
@@ -13,39 +9,70 @@ import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
       </a>
     </div>
 
-    <div class="flex items-center gap-8 text-stone-700 font-medium">
-      <!-- <a href="#" class="text-sky-500 border-b-2 border-sky-500 pb-1">Servicios</a> UTILIZAR COMO HOVER EL SKY-->
-      <a
-        href="/servicios"
-        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
-        >Servicios</a
-      >
-      <a
-        href="/proceso"
-        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
-        >Proceso</a
-      >
-      <a
-        href="/tecnologias"
-        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
-        >Tecnologías</a
-      >
-      <a
-        href="/beneficios"
-        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
-        >Beneficios</a
-      >
-      <a
-        href="/soluciones"
-        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
-        >Soluciones</a
-      >
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-8 text-stone-700 font-medium">
+      <a href="/servicios" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Servicios</a>
+      <a href="/proceso" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Proceso</a>
+      <a href="/tecnologias" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Tecnologías</a>
+      <a href="/soluciones" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Soluciones</a>
     </div>
 
-    <button
-      class="bg-[#260700] text-white px-6 py-2.5 rounded-xl hover:bg-[#3a0f00] transition-all font-medium"
-    >
-      Contactar
-    </button>
+    <!-- Desktop CTA -->
+    <div class="hidden lg:block">
+      <button class="bg-[#260700] text-white px-6 py-2.5 rounded-xl hover:bg-[#3a0f00] transition-all font-medium">Contactar</button>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <div class="lg:hidden flex items-center">
+      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md inline-flex items-center justify-center text-stone-700 focus:outline-none focus:ring-2 focus:ring-sky-300">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
   </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobile-menu" class="lg:hidden hidden px-6 pb-6">
+    <div class="flex flex-col gap-3">
+      <a href="/servicios" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Servicios</a>
+      <a href="/proceso" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Proceso</a>
+      <a href="/tecnologias" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Tecnologías</a>
+      <a href="/soluciones" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Soluciones</a>
+      <a href="/contacto" class="block mt-2 bg-[#260700] text-white text-center py-3 rounded-xl">Contactar</a>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('mobile-menu-button');
+      const panel = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+      if(!(btn instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.classList.toggle('hidden');
+        if(iconOpen instanceof HTMLElement && iconClose instanceof HTMLElement){
+          iconOpen.classList.toggle('hidden');
+          iconClose.classList.toggle('hidden');
+        }
+      });
+      // close on outside click
+      document.addEventListener('click', (e)=>{
+        if(!panel.classList.contains('hidden')){
+          const path = (e.composedPath && e.composedPath()) || [e.target];
+          const within = path.includes(panel) || path.includes(btn);
+          if(!within){
+            panel.classList.add('hidden');
+            btn.setAttribute('aria-expanded','false');
+            if(iconOpen instanceof HTMLElement && iconClose instanceof HTMLElement){
+              iconOpen.classList.remove('hidden');
+              iconClose.classList.add('hidden');
+            }
+          }
+        }
+      });
+    })();
+  </script>
 </nav>

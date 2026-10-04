@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: light;
+}
+
+html {
+  font-family: "Onest Variable", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(72, 194, 241, 0.18), transparent 32%),
+    linear-gradient(180deg, #f9f3e9 0%, #f4efe7 100%);
+  color: rgba(17, 17, 17, 0.9);
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+main {
+  overflow-x: clip;
+}
+
+::selection {
+  background: rgba(69, 179, 238, 0.28);
+}
+
 .justify-self-anchor-center {
-    justify-self: anchor-center;
+  justify-self: anchor-center;
 }

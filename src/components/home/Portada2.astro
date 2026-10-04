@@ -4,31 +4,32 @@ import CloudIcon from "@/assets/icons/CloudIcon.astro";
 import CyberIcon from "@/assets/icons/CyberIcon.astro";
 import SystemIcon from "@/assets/icons/SystemIcon.astro";
 ---
-<div class="flex justify-center gap-4 mb-8">
+<div class="mb-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
   <button
-    class="bg-gradient-to-r from-[#45B3EE] to-[#2E3DD4] text-white px-6 py-2.5 rounded-xl hover:bg-[#3a0f00] transition-all font-medium"
+    class="w-full max-w-xs rounded-xl bg-gradient-to-r from-[#45B3EE] to-[#2E3DD4] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-200 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl sm:w-auto sm:px-6 sm:text-base"
   >
     Explora el Portafolio
   </button>
-  <a href="/quienes-somos"
-    class="bg-white text-[#260700] px-6 py-2.5 rounded-xl hover:bg-[#F9F3E9] border border-[#260700]/50 transition-all font-medium"
+  <a
+    href="/quienes-somos"
+    class="w-full max-w-xs rounded-xl border border-[#260700]/50 bg-white px-5 py-3 text-center text-sm font-semibold text-[#260700] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F9F3E9] sm:w-auto sm:px-6 sm:text-base"
   >
     Nuestra Visión
   </a>
 </div>
 <div class="mx-auto text-center">
-  <div class="flex items-center justify-center gap-6">
-    <p class="text-lg leading-8 text-gray-600 flex items-center gap-2">
-      <CodeIcon class="w-5 h-5" />AI INTEGRATION
+  <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 sm:gap-x-6 lg:gap-x-8">
+    <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-600 sm:text-sm lg:text-base">
+      <CodeIcon class="h-5 w-5" />AI INTEGRATION
     </p>
-    <p class="text-lg leading-8 text-gray-600 flex items-center gap-2">
-      <CloudIcon class="w-5 h-5" />CLOUD NATIVE
+    <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-600 sm:text-sm lg:text-base">
+      <CloudIcon class="h-5 w-5" />CLOUD NATIVE
     </p>
-    <p class="text-lg leading-8 text-gray-600 flex items-center gap-2">
-      <CyberIcon class="w-5 h-5" />CYBER SECURITY
+    <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-600 sm:text-sm lg:text-base">
+      <CyberIcon class="h-5 w-5" />CYBER SECURITY
     </p>
-    <p class="text-lg leading-8 text-gray-600 flex items-center gap-2">
-      <SystemIcon class="w-5 h-5" />SYSTEM DESIGN
+    <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-600 sm:text-sm lg:text-base">
+      <SystemIcon class="h-5 w-5" />SYSTEM DESIGN
     </p>
   </div>
 </div>

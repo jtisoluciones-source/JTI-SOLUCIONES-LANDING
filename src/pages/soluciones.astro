@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Badge from "@/components/Badge.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
 import FeatureBlock from "@/components/ui/FeatureBlock.astro";
 import SyncFailIcon from "@/assets/icons/SyncFailIcon.astro";
 import NotAuthIcon from "@/assets/icons/NotAuthIcon.astro";
@@ -13,30 +14,32 @@ import WarningIcon from "@/assets/icons/WarningIcon.astro";
     title="Soluciones de JTI"
     description="Explora los servicios que JTI ofrece a sus clientes, diseñados para satisfacer las necesidades de la industria del tabaco. Descubre cómo nuestras soluciones innovadoras pueden ayudarte a alcanzar tus objetivos comerciales."
 >
-    <main class="pt-20">
-        <div class="mx-auto text-center">
-            <Badge
-                id="diagnostico-avanzado"
-                title="DIAGNOSTICO AVANZADO"
-                class="block mx-auto w-fit mb-4 mt-[10vmin]"
-            />
-            <h2 class="text-7xl font-bold text-[#260700]">
-                Desafios Operativos y
-            </h2>
-            <h2
-                class="text-7xl font-bold bg-gradient-to-r from-[#45B3EE] to-[#2E3DD4] bg-clip-text text-transparent animate-pulse pb-1"
-            >
-                Soluciones Estratégicas
-            </h2>
-            <p
-                class="mx-auto max-w-4xl text-center text-lg leading-8 text-gray-600 p-8 rounded-lg font-medium"
-            >
-                JTI identifica y resuelve los cuellos de botella técnicos
-                críticos que limitan el crecimiento de tu organización a través
-                de ingeniería de precisión.
-            </p>
-        </div>
-        <section class="flex gap-[1rem]">
+    <main class="mt-32">
+        <SectionContainer id="diagnostico-avanzado" class="w-full max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mx-auto text-center">
+                <Badge
+                    id="diagnostico-avanzado"
+                    title="DIAGNOSTICO AVANZADO"
+                    class="block mx-auto w-fit mb-4 mt-[10vmin]"
+                />
+                <h2 class="text-7xl font-bold text-[#260700]">
+                    Desafios Operativos y
+                </h2>
+                <h2
+                    class="text-7xl font-bold bg-gradient-to-r from-[#45B3EE] to-[#2E3DD4] bg-clip-text text-transparent animate-pulse pb-1"
+                >
+                    Soluciones Estratégicas
+                </h2>
+                <p
+                    class="mx-auto max-w-4xl text-center text-lg leading-8 text-gray-600 p-8 rounded-lg font-medium"
+                >
+                    JTI identifica y resuelve los cuellos de botella técnicos
+                    críticos que limitan el crecimiento de tu organización a través
+                    de ingeniería de precisión.
+                </p>
+            </div>
+        </SectionContainer>
+        <SectionContainer id="impacto-operativo" class="flex w-full max-w-7xl mx-auto gap-[1rem] py-16 px-4 sm:px-6 lg:px-8">
             <aside class="py-[3rem] pl-[3rem] pr-[1.5rem]">
                 <section class="bg-white rounded-xl p-[10%] mb-[7%]">
                     <h2>Impacto Operativo</h2>
@@ -157,39 +160,41 @@ import WarningIcon from "@/assets/icons/WarningIcon.astro";
                     </ul>
                 </FeatureBlock>
             </section>
-        </section>
-        <section class="flex bg-white max-w-[92.2%] justify-self-anchor-center">
-            <div>
-                <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFKocmmqxpWGV3w_173epd3hcWwiDhvMR4sSHEHv1y7gI0o8xYkODUKJnXe69rfczAC3DCjJnbNh06ao4gzXsaRgGa9aal3l4j8NbzI4AnFdsPXlrrcQD_94Strw1b80Lo7CKiH1CThCCVf9e5VwmGAtfbd3QSO-iRRZX8CSjz_ifkALKdvwNNJgUklixsxCaHZzxpKTi6fHuCZn-QMg6FJCGtYOchzKZfz95Y2NGvVOkRyZXvlIW59jzWfyZUeQDb5ntqivSVkgk"
-                    alt="imagen"
-                    class="rounded-[20px]"
-                />
-            </div>
-            <div class="ml-[4%] py-[7%] w-[50%]">
-                <h2 class="text-3xl font-bold mb-[3rem]">
-                    ¿Listo para estabilizar su infraestructura?
-                </h2>
-                <p>
-                    Nuestros especialistas realizan una auditoría exhaustiva de
-                    sus sistemas actuales para identificar riesgos antes de que
-                    se conviertan en interrupciones de servicio.
-                </p>
-                <div class="flex gap-[2%] mt-[3rem]">
-                    <a
-                        ><button
-                            class="rounded-md font-semibold bg-orange-600 text-white px-[1rem] py-[1.7dvh] cursor-pointer"
-                            >Solicitar Auditoría</button
-                        ></a
-                    >
-                    <a
-                        ><button
-                            class="rounded-md font-semibold bg-white text-orange-500 border-2 border-orange-500 px-[1rem] py-[1.7dvh] cursor-pointer"
-                            >Ver Casos de Éxito</button
-                        ></a
-                    >
+        </SectionContainer>
+        <SectionContainer id="cta-soluciones" class="w-full max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="flex bg-white rounded-2xl overflow-hidden shadow-sm">
+                <div>
+                    <img
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFKocmmqxpWGV3w_173epd3hcWwiDhvMR4sSHEHv1y7gI0o8xYkODUKJnXe69rfczAC3DCjJnbNh06ao4gzXsaRgGa9aal3l4j8NbzI4AnFdsPXlrrcQD_94Strw1b80Lo7CKiH1CThCCVf9e5VwmGAtfbd3QSO-iRRZX8CSjz_ifkALKdvwNNJgUklixsxCaHZzxpKTi6fHuCZn-QMg6FJCGtYOchzKZfz95Y2NGvVOkRyZXvlIW59jzWfyZUeQDb5ntqivSVkgk"
+                        alt="imagen"
+                        class="rounded-[20px]"
+                    />
+                </div>
+                <div class="ml-[4%] py-[7%] w-[50%]">
+                    <h2 class="text-3xl font-bold mb-[3rem]">
+                        ¿Listo para estabilizar su infraestructura?
+                    </h2>
+                    <p>
+                        Nuestros especialistas realizan una auditoría exhaustiva de
+                        sus sistemas actuales para identificar riesgos antes de que
+                        se conviertan en interrupciones de servicio.
+                    </p>
+                    <div class="flex gap-[2%] mt-[3rem]">
+                        <a
+                            ><button
+                                class="rounded-md font-semibold bg-orange-600 text-white px-[1rem] py-[1.7dvh] cursor-pointer"
+                                >Solicitar Auditoría</button
+                            ></a
+                        >
+                        <a
+                            ><button
+                                class="rounded-md font-semibold bg-white text-orange-500 border-2 border-orange-500 px-[1rem] py-[1.7dvh] cursor-pointer"
+                                >Ver Casos de Éxito</button
+                            ></a
+                        >
+                    </div>
                 </div>
             </div>
-        </section>
+        </SectionContainer>
     </main>
 </Layout>

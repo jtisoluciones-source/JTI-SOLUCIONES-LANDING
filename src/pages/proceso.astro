@@ -5,7 +5,6 @@ import Layout from "@/layouts/Layout.astro";
 import Timeline from "@/pages/process/Timeline.astro";
 import BentoProcess from "@/pages/process/BentoProcess.astro";
 import Cta from "./process/Cta.astro";
-
 ---
 
 <Layout
@@ -13,18 +12,25 @@ import Cta from "./process/Cta.astro";
   description="Descubre los procesos que JTI utiliza para ofrecer soluciones de calidad a sus clientes. Aprende cómo nuestros métodos eficientes y nuestras prácticas innovadoras contribuyen a tu éxito comercial."
 >
   <main class="mt-32">
-    <SectionContainer id="proceso" class="gap-6">
-      <Badge id="proceso" title="METODOLOGÍA AGILE" />
-      <h1 class="text-4xl font-bold text-center text-[#260700]">
-        Nuestro Proceso
-      </h1>
-      <p
-        class="mx-auto max-w-prose text-center text-lg leading-8 text-gray-600 rounded-lg font-medium italic"
+    <SectionContainer
+      id="proceso"
+      class="w-full max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 mt-10"
+    >
+      <div
+        class="mx-auto text-center"
       >
-        Transformamos desafíos complejos en soluciones digitales robustas
-        mediante un flujo de trabajo estructurado, transparente y orientado a
-        resultados.
-      </p>
+          <Badge id="proceso" title="METODOLOGÍA AGILE" />
+          <h1 class="text-4xl font-bold text-center text-[#260700] mt-4">
+            Nuestro Proceso
+          </h1>
+          <p
+            class="mx-auto max-w-prose text-center text-lg leading-8 text-gray-600 rounded-lg font-medium italic mt-4"
+          >
+            Transformamos desafíos complejos en soluciones digitales robustas
+            mediante un flujo de trabajo estructurado, transparente y orientado
+            a resultados.
+          </p>
+      </div>
     </SectionContainer>
     <SectionContainer
       id="timeline"

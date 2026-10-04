@@ -4,56 +4,52 @@ import StarsIcon from "@/assets/icons/StarsIcon.astro";
 import VelocityIcon from "@/assets/icons/VelocityIcon.astro";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-350 mx-auto">
+<div class="mx-auto grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-12 md:gap-6">
   <div
-    class="md:col-span-8 bg-[#FDFCF9] border border-[#E8E1D6] rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl transition-shadow group relative overflow-visible"
+    class="group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-[#E8E1D6] bg-[#FDFCF9] p-5 shadow-[0_20px_40px_rgba(38,7,0,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_26px_45px_rgba(38,7,0,0.08)] md:col-span-8 md:p-7 lg:p-8"
   >
-  <StarsIcon class="absolute right-8 top-8 w-48 h-auto transition-opacity hover:opacity-50" />
-  <div class="max-w-md">
-      <h3 class="text-3xl font-semibold text-slate-900 mb-6">
+    <StarsIcon class="absolute right-4 top-4 h-20 w-20 opacity-80 transition-opacity duration-300 hover:opacity-100 sm:right-6 sm:top-6 sm:h-24 sm:w-24 lg:h-32 lg:w-32" />
+    <div class="relative z-10 max-w-md">
+      <h3 class="mb-3 text-2xl font-semibold text-slate-900 sm:text-3xl">
         Soluciones Escalables
       </h3>
-      <p class="text-base text-slate-600">
+      <p class="text-sm leading-6 text-slate-600 sm:text-base">
         Arquitecturas robustas diseñadas para crecer orgánicamente con su
         organización, asegurando estabilidad y alto rendimiento en entornos de
         alta demanda.
       </p>
     </div>
-    <div class="mt-4">
+    <div class="relative z-10 mt-5">
       <img
-        class="w-full h-48 object-cover rounded-xl border border-slate-200/50 z-100"
+        class="h-44 w-full rounded-2xl border border-slate-200/60 object-cover sm:h-52 lg:h-60"
         data-alt="A sophisticated close-up of a high-end server rack with glowing soft purple and lavender blue status lights. The image conveys a clean, professional, and powerful technological infrastructure with extreme clarity and a minimalist SaaS aesthetic. Soft focus in the background creates depth, highlighting the precision engineering and modern hardware design."
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAhkkbRL38hiydjPoTWcK7xpTz5aZag147NpqBJZ68cvn09JyXEXVshCaaz0t5X2xLwVL-UBPQghjb8QaBrP0dS7gdb3QKERKnMK1W5AQIZNUH2Oa7igZUhF9TYn8UzPCVv7hAp7kvU7MXxJAHreODiWA59Ccr_Zsb_oLOS-pUPcouKJE5_cr2CTGTi2xkJVMWeDp0slxJT0tIanZPEsyTZqJ5vZzOZFsQM_1QBSnr4kUecycnFsmtriWszXB8zzxiKaqhyXCLnLU"
       />
     </div>
   </div>
-  <!-- Secondary Small Cards Stack -->
-  <div class="md:col-span-4 flex flex-col gap-6">
+
+  <div class="flex flex-col gap-5 md:col-span-4 md:gap-6">
     <div
-      class="flex-1 bg-[#FDFCF9] border border-[#E8E1D6] rounded-3xl p-8 flex flex-col justify-center items-center text-center group hover:bg-[#FDFCF9]/80 transition-all"
+      class="flex flex-1 flex-col items-center justify-center rounded-[28px] border border-[#E8E1D6] bg-[#FDFCF9] p-5 text-center shadow-[0_20px_40px_rgba(38,7,0,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_26px_45px_rgba(38,7,0,0.08)] sm:p-6"
     >
-      <VelocityIcon class="w-12 h-auto text-white" />
-      <h4 class="text-xl font-semibold text-slate-700 mb-2">Optimización</h4>
+      <VelocityIcon class="mb-3 h-12 w-12 sm:h-14 sm:w-14" />
+      <h4 class="mb-2 text-xl font-semibold text-slate-700">Optimización</h4>
       <p class="text-sm text-orange-500">
         Eficiencia máxima en cada línea de código.
       </p>
     </div>
     <div
-      class="flex-1 bg-[#FDFCF9] border border-[#E8E1D6] rounded-3xl p-8 flex items-center gap-4 group"
+      class="flex flex-1 items-center gap-4 rounded-[28px] border border-[#E8E1D6] bg-[#FDFCF9] p-5 shadow-[0_20px_40px_rgba(38,7,0,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_26px_45px_rgba(38,7,0,0.08)] sm:p-6"
     >
       <div class="flex-1">
-        <h4
-          class="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-2"
-        >
+        <h4 class="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-slate-900">
           I+D Constante
         </h4>
-        <p class="text-sm text-slate-600">
+        <p class="text-sm leading-6 text-slate-600">
           Exploramos nuevas fronteras tecnológicas.
         </p>
       </div>
-      <BulbIcon
-        class="w-12 h-auto text-slate-400 group-hover:rotate-12 transition-transform opacity-40"
-      />
+      <BulbIcon class="h-12 w-12 shrink-0 text-slate-400 opacity-40 transition-transform duration-300 group-hover:rotate-12" />
     </div>
   </div>
 </div>

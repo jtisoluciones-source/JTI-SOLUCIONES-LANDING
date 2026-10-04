@@ -6,6 +6,7 @@ import FeatureCard from "@/components/ui/FeatureCard.astro";
 import GroupUsers from "@/assets/icons/GroupUsers.astro";
 import BiometricIcon from "@/assets/icons/BiometricIcon.astro";
 import ServerIcon from "@/assets/icons/ServerIcon.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
 ---
 
 <Layout
@@ -13,26 +14,31 @@ import ServerIcon from "@/assets/icons/ServerIcon.astro";
   description="Explora los servicios que JTI ofrece a sus clientes, diseñados para satisfacer las necesidades de la industria del tabaco. Descubre cómo nuestras soluciones innovadoras pueden ayudarte a alcanzar tus objetivos comerciales."
 >
   <main class="pt-20">
-    <section
-      class="flex flex-col md:flex-row items-start gap-12 p-10 md:p-32 mb-16 bg-gradient-to-br from-[#FFFFFF] to-[#D4ABEB]"
+    <SectionContainer
+      id="catalogo-soluciones"
+      class="w-full max-w-none bg-gradient-to-br from-[#FFFFFF] to-[#D4ABEB] px-0"
     >
-      <div class="ml-0 md:ml-[5rem] w-full md:w-auto">
-        <Badge
-          id="catalogo-soluciones"
-          title="Catálogo de soluciones"
-          class="w-max inline-flex items-center justify-center"
-        />
-        <h1 class="max-w-2xl text-left font-bold text-4xl md:text-5xl mt-6">
-          Soluciones técnicas para el éxito corporativo.
-        </h1>
-        <p class="mt-6 text-left text-base md:text-lg text-gray-700 max-w-lg">
-          Potenciamos su operatividad mediante servicios integrales de hardware,
-          software y consultoría técnica especializada.
-        </p>
+      <div class="mx-auto max-w-7xl w-full flex flex-col md:flex-row items-start gap-12 p-10 md:p-32">
+        <div class="ml-0 md:ml-[5rem] w-full md:w-auto">
+          <Badge
+            id="catalogo-soluciones"
+            title="Catálogo de soluciones"
+            class="w-max inline-flex items-center justify-center"
+          />
+          <h1 class="max-w-2xl text-left font-bold text-4xl md:text-5xl mt-6">
+            Soluciones técnicas para el éxito corporativo.
+          </h1>
+          <p class="mt-6 text-left text-base md:text-lg text-gray-700 max-w-lg">
+            Potenciamos su operatividad mediante servicios integrales de hardware,
+            software y consultoría técnica especializada.
+          </p>
+        </div>
       </div>
-    </section>
-    <section>
-      <div class="grid grid-cols-3 gap-[2rem] p-[3rem]">
+    </SectionContainer>
+    <SectionContainer
+      class="w-full max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="grid grid-cols-3 gap-8">
         <Cards
           titulo="Biométricos y asistencia"
           descripcion={`Implementación de sistemas avanzados de control
@@ -170,9 +176,9 @@ import ServerIcon from "@/assets/icons/ServerIcon.astro";
           </svg>
         </Cards>
       </div>
-      <div class="mx-[4dvw]">
+      <div class="p-8">
         <div class="rounded-xl bg-gray-50 flex p-[2rem] gap-[2%]">
-          <div class="w-[40vmax]">
+          <div class="w-full">
             <GroupUsers />
             <h2 class="font-bold text-xl mb-[1rem] mt-[1dvh]">
               Soporte y asesoría Nómina/RH
@@ -233,22 +239,26 @@ import ServerIcon from "@/assets/icons/ServerIcon.astro";
           </div>
         </div>
       </div>
-    </section>
-    <div class="bg-[#260700] rounded-2xl p-[2rem] mt-[10%] mx-[4.1%]">
-      <h2 class="text-white font-bold mb-[1rem] mt-[1rem] text-center text-2xl">
-        ¿Listo para transformar su Infraestructura?
-      </h2>
-      <p class="text-center text-taupe-300 font-semibold">
-        Nuestro equipo de expertos está listo para diseñar una solución a la
-        <br />
-        medida de su organización.
-      </p>
-      <a
-        ><button
-          class="rounded-full font-semibold bg-yellow-50 text-orange-500 block mx-auto mt-[2rem] px-[4rem] py-[2dvh] cursor-pointer"
-          >Agendar una Consultoría Técnica</button
-        ></a
-      >
-    </div>
+    </SectionContainer>
+    <SectionContainer
+      class="bg-[#260700] rounded-2xl w-full max-w-7xl mx-auto p-8 md:p-16"
+    >
+        <h2
+          class="text-white font-bold mb-[1rem] mt-[1rem] text-center text-2xl"
+        >
+          ¿Listo para transformar su Infraestructura?
+        </h2>
+        <p class="text-center text-taupe-300 font-semibold">
+          Nuestro equipo de expertos está listo para diseñar una solución a la
+          <br />
+          medida de su organización.
+        </p>
+        <a
+          ><button
+            class="rounded-full font-semibold bg-yellow-50 text-orange-500 block mx-auto mt-[2rem] px-[4rem] py-[2dvh] cursor-pointer"
+            >Agendar una Consultoría Técnica</button
+          ></a
+        >
+    </SectionContainer>
   </main>
 </Layout>
