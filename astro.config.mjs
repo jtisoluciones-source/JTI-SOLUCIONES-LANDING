@@ -8,5 +8,8 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  adapter: netlify()
+  output: 'server',
+  adapter: netlify({
+    edgeMiddleware: true
+  })
 })
