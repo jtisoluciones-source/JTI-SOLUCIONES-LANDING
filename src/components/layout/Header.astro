@@ -1,7 +1,10 @@
 ---
 import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
 ---
-<nav class="fixed top-0 left-0 w-full z-50 bg-[#F9F3E9]-50/80 backdrop-blur-md border-b border-stone-200">
+
+<nav
+  class="fixed top-0 left-0 w-full z-50 bg-[#F9F3E9]-50/80 backdrop-blur-md border-b border-stone-200"
+>
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <div class="flex items-center gap-1 font-bold text-2xl text-stone-900">
       <a href="/" class="flex items-center gap-1">
@@ -11,22 +14,77 @@ import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
 
     <!-- Desktop links -->
     <div class="hidden lg:flex items-center gap-8 text-stone-700 font-medium">
-      <a href="/servicios" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Servicios</a>
-      <a href="/proceso" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Proceso</a>
-      <a href="/tecnologias" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Tecnologías</a>
-      <a href="/soluciones" class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1">Soluciones</a>
+      <a
+        href="/servicios"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Servicios</a
+      >
+      <a
+        href="/proceso"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Proceso</a
+      >
+      <a
+        href="/tecnologias"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Tecnologías</a
+      >
+      <a
+        href="/soluciones"
+        class="hover:text-sky-500 transition-colors hover:border-b-2 hover:border-sky-500 hover:pb-1"
+        >Soluciones</a
+      >
     </div>
 
     <!-- Desktop CTA -->
     <div class="hidden lg:block">
-      <button class="bg-[#260700] text-white px-6 py-2.5 rounded-xl hover:bg-[#3a0f00] transition-all font-medium">Contactar</button>
+      <a
+        href="https://wa.me/message/TNLDIM5B7ALSA1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#260700] text-white px-6 py-2.5 rounded-xl hover:bg-[#3a0f00] transition-all font-medium"
+        >Contactar</a
+      >
     </div>
 
     <!-- Mobile hamburger -->
     <div class="lg:hidden flex items-center">
-      <button id="mobile-menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md inline-flex items-center justify-center text-stone-700 focus:outline-none focus:ring-2 focus:ring-sky-300">
-        <svg id="icon-open" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      <button
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="p-2 rounded-md inline-flex items-center justify-center text-stone-700 focus:outline-none focus:ring-2 focus:ring-sky-300"
+      >
+        <svg
+          id="icon-open"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path></svg
+        >
+        <svg
+          id="icon-close"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path></svg
+        >
       </button>
     </div>
   </div>
@@ -34,60 +92,78 @@ import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
   <!-- Mobile menu panel -->
   <div id="mobile-menu" class="lg:hidden hidden px-6 pb-6">
     <div class="flex flex-col gap-3">
-      <a href="/servicios" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Servicios</a>
-      <a href="/proceso" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Proceso</a>
-      <a href="/tecnologias" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Tecnologías</a>
-      <a href="/soluciones" class="block py-3 px-4 rounded-lg hover:bg-slate-100">Soluciones</a>
-      <a href="/contacto" class="block mt-2 bg-[#260700] text-white text-center py-3 rounded-xl">Contactar</a>
+      <a href="/servicios" class="block py-3 px-4 rounded-lg hover:bg-slate-100"
+        >Servicios</a
+      >
+      <a href="/proceso" class="block py-3 px-4 rounded-lg hover:bg-slate-100"
+        >Proceso</a
+      >
+      <a
+        href="/tecnologias"
+        class="block py-3 px-4 rounded-lg hover:bg-slate-100">Tecnologías</a
+      >
+      <a
+        href="/soluciones"
+        class="block py-3 px-4 rounded-lg hover:bg-slate-100">Soluciones</a
+      >
+      <a
+        href="/contacto"
+        class="block mt-2 bg-[#260700] text-white text-center py-3 rounded-xl"
+        >Contactar</a
+      >
     </div>
   </div>
 
   <script>
     const setMobileMenuOpen = (open: boolean) => {
-      const button = document.getElementById('mobile-menu-button');
-      const panel = document.getElementById('mobile-menu');
-      const iconOpen = document.getElementById('icon-open');
-      const iconClose = document.getElementById('icon-close');
+      const button = document.getElementById("mobile-menu-button");
+      const panel = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
 
-      if (!(button instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+      if (
+        !(button instanceof HTMLButtonElement) ||
+        !(panel instanceof HTMLElement)
+      )
+        return;
 
-      button.setAttribute('aria-expanded', String(open));
-      button.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-      panel.classList.toggle('hidden', !open);
-      iconOpen?.classList.toggle('hidden', open);
-      iconClose?.classList.toggle('hidden', !open);
+      button.setAttribute("aria-expanded", String(open));
+      button.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      panel.classList.toggle("hidden", !open);
+      iconOpen?.classList.toggle("hidden", open);
+      iconClose?.classList.toggle("hidden", !open);
     };
 
-    document.addEventListener('click', (event) => {
+    document.addEventListener("click", (event) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
 
-      if (target.closest('#mobile-menu-button')) {
-        const button = document.getElementById('mobile-menu-button');
-        const isOpen = button?.getAttribute('aria-expanded') === 'true';
+      if (target.closest("#mobile-menu-button")) {
+        const button = document.getElementById("mobile-menu-button");
+        const isOpen = button?.getAttribute("aria-expanded") === "true";
         setMobileMenuOpen(!isOpen);
         return;
       }
 
-      const panel = document.getElementById('mobile-menu');
-      if (!panel || panel.classList.contains('hidden')) return;
+      const panel = document.getElementById("mobile-menu");
+      if (!panel || panel.classList.contains("hidden")) return;
 
-      if (!panel.contains(target) || target.closest('#mobile-menu a')) {
+      if (!panel.contains(target) || target.closest("#mobile-menu a")) {
         setMobileMenuOpen(false);
       }
     });
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key !== 'Escape') return;
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
 
-      const button = document.getElementById('mobile-menu-button');
-      if (button?.getAttribute('aria-expanded') !== 'true') return;
+      const button = document.getElementById("mobile-menu-button");
+      if (button?.getAttribute("aria-expanded") !== "true") return;
 
       setMobileMenuOpen(false);
       button.focus();
     });
 
-    document.addEventListener('astro:before-preparation', () => {
+    document.addEventListener("astro:before-preparation", () => {
       setMobileMenuOpen(false);
     });
   </script>
