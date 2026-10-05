@@ -1,0 +1,92 @@
+---
+import SectionContainer from "@/components/SectionContainer.astro";
+---
+
+<SectionContainer
+  id="impacto-operativo"
+  class="mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8"
+>
+  <div class="grid gap-6 lg:grid-cols-[minmax(240px,0.8fr)_minmax(0,1.7fr)]">
+    <div class="space-y-5">
+      <div
+        class="rounded-[1.75rem] border border-[#eae2dc] bg-[#f5f0ec] p-5 shadow-[0_4px_12px_rgba(15,23,42,0.03)]"
+      >
+        <div
+          class="flex items-center justify-between text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#64748b]"
+        >
+          <span>Estado de red</span>
+          <span class="inline-flex h-2.5 w-2.5 rounded-full bg-[#ef4444]"
+          ></span>
+        </div>
+
+        <div class="mt-5 space-y-4">
+          <div>
+            <div
+              class="mb-2 flex items-center justify-between text-[0.7rem] text-[#475569]"
+            >
+              <span>Latencia</span>
+              <span class="font-semibold text-[#0f172a]">12ms</span>
+            </div>
+            <div class="h-2.5 w-full overflow-hidden rounded-full bg-[#e7e2db]">
+              <div
+                class="h-full w-[72%] rounded-full bg-linear-to-r from-[#9b7dff] via-[#7e7ef6] to-[#4d86ff]"
+              >
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="mb-2 flex items-center justify-between text-[0.7rem] text-[#475569]"
+            >
+              <span>Sincronización</span>
+              <span class="font-semibold text-[#0f172a]">99.9%</span>
+            </div>
+            <div class="h-2.5 w-full overflow-hidden rounded-full bg-[#e7e2db]">
+              <div
+                class="h-full w-[94%] rounded-full bg-linear-to-r from-[#4cc67d] to-[#26a35e]"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-[1.75rem] border border-[#eae2dc] bg-[#f5f0ec] p-5 shadow-[0_4px_12px_rgba(15,23,42,0.03)]"
+      >
+        <div
+          class="flex items-center justify-between text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#64748b]"
+        >
+          <span>Carga de trabajo</span>
+          <span class="inline-flex h-2.5 w-2.5 rounded-full bg-[#ef4444]"
+          ></span>
+        </div>
+
+        <div class="mt-5 flex h-24 items-end gap-2">
+          <span class="w-full rounded-t-xl bg-[#dfe7ff]" style="height: 35%;"
+          ></span>
+          <span class="w-full rounded-t-xl bg-[#d8d0ff]" style="height: 50%;"
+          ></span>
+          <span class="w-full rounded-t-xl bg-[#c8c2ff]" style="height: 70%;"
+          ></span>
+          <span class="w-full rounded-t-xl bg-[#a98ef9]" style="height: 86%;"
+          ></span>
+          <span class="w-full rounded-t-xl bg-[#8272ea]" style="height: 92%;"
+          ></span>
+          <span class="w-full rounded-t-xl bg-[#6a63db]" style="height: 76%;"
+          ></span>
+        </div>
+
+        <div
+          class="mt-4 flex items-center justify-between text-[0.7rem] text-[#64748b]"
+        >
+          <span>Actividad en tiempo real</span>
+          <span class="font-semibold text-[#0f172a]">32%</span>
+        </div>
+      </div>
+    </div>
+
+    <slot />
+  </div>
+</SectionContainer>

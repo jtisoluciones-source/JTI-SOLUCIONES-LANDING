@@ -1,0 +1,40 @@
+---
+import SectionContainer from "@/components/SectionContainer.astro";
+---
+
+<SectionContainer
+  id="cta-soluciones"
+  class="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:px-8"
+>
+  <div class="grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+    <div class="relative overflow-hidden rounded-4xl border border-[#dfe7ee] bg-slate-900 shadow-[0_20px_50px_rgba(15,23,42,0.12)]">
+      <div
+        class="h-80 w-full bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80');"
+      ></div>
+      <div class="absolute inset-0 bg-linear-to-t from-[#020b12]/80 via-[#020b12]/20 to-transparent"></div>
+      <p class="absolute bottom-5 left-5 right-5 text-lg font-medium italic text-white md:text-xl">
+        “Transformamos el caos técnico en eficiencia operativa medible.”
+      </p>
+    </div>
+
+    <div class="lg:pl-3">
+      <h2 class="text-3xl font-bold tracking-tighter text-[#260700] sm:text-4xl lg:text-[3rem]">
+        ¿Listo para estabilizar su infraestructura?
+      </h2>
+
+      <p class="mt-5 max-w-xl text-base leading-7 text-[#4b5563] sm:text-lg">
+        Nuestros especialistas realizan una auditoría exhaustiva de sus sistemas actuales para identificar riesgos antes de que se conviertan en interrupciones de servicio.
+      </p>
+
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a href="#" class="inline-flex items-center justify-center rounded-xl border border-transparent bg-[#4b39d9] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(75,57,217,0.25)] transition hover:bg-[#402ed1]">
+          Solicitar Auditoría
+        </a>
+        <a href="#" class="inline-flex items-center justify-center rounded-xl border border-[#d5d7dd] bg-white px-5 py-3 text-sm font-semibold text-[#1f2937] transition hover:border-[#a8b0c4] hover:bg-slate-50">
+          Ver Casos de Éxito
+        </a>
+      </div>
+    </div>
+  </div>
+</SectionContainer>

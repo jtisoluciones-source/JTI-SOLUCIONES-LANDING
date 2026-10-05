@@ -1,11 +1,20 @@
-<svg
-    width="14"
-    height="14"
-    viewBox="0 0 12 12"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+---
+import Layout from "@/layouts/Layout.astro";
+import HeroDiagnostico from "@/components/solutions/HeroDiagnostico.astro";
+import ImpactMetrics from "@/components/solutions/ImpactMetrics.astro";
+import ProblemGrid from "@/components/solutions/ProblemGrid.astro";
+import CtaSoluciones from "@/components/solutions/CtaSoluciones.astro";
+import { operationalProblems } from "@/data/solutions";
+---
+
+<Layout
+  title="Soluciones de JTI"
+  description="Explora los servicios..."
 >
-    <path
-        d="M6 9.33333C6.18889 9.33333 6.34722 9.26944 6.475 9.14167C6.60278 9.01389 6.66667 8.85556 6.66667 8.66667C6.66667 8.47778 6.60278 8.31944 6.475 8.19167C6.34722 8.06389 6.18889 8 6 8C5.81111 8 5.65278 8.06389 5.525 8.19167C5.39722 8.31944 5.33333 8.47778 5.33333 8.66667C5.33333 8.85556 5.39722 9.01389 5.525 9.14167C5.65278 9.26944 5.81111 9.33333 6 9.33333ZM5.33333 6.66667H6.66667V2.66667H5.33333V6.66667ZM3.5 12L0 8.5V3.5L3.5 0H8.5L12 3.5V8.5L8.5 12H3.5ZM4.06667 10.6667H7.93333L10.6667 7.93333V4.06667L7.93333 1.33333H4.06667L1.33333 4.06667V7.93333L4.06667 10.6667Z"
-        fill="#E9531C"></path>
-</svg>
+  <main class="mt-32 pb-16">
+    <HeroDiagnostico />
+    <ImpactMetrics />
+    <ProblemGrid problems={operationalProblems} />
+    <CtaSoluciones />
+  </main>
+</Layout>
