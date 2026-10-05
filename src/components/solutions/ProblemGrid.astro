@@ -1,0 +1,21 @@
+---
+import OperationalProblemCard from "@/components/solutions/OperationalProblemCard.astro";
+
+interface Props {
+  problems: {
+    title: string;
+    iconPath: string;
+    iconColors: string;
+    symptoms: string[];
+    solution: string;
+  }[];
+}
+
+const { problems } = Astro.props;
+---
+
+<div class="grid gap-4 sm:grid-cols-2">
+  {problems.map((problem) => (
+    <OperationalProblemCard {...problem} />
+  ))}
+</div>
