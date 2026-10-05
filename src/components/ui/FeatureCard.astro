@@ -2,9 +2,9 @@
 const { texto, className = "" } = Astro.props;
 ---
 
-<section class={`rounded-md py-[1rem] px-[1dvw] ${className}`}>
-    <h2>
-        <slot name="titulo" />
-    </h2>
-    <p>{texto}</p>
+<section class={`rounded-2xl border border-[#dde2f0] bg-white/80 p-4 shadow-sm sm:p-5 ${className}`}>
+  <h3 class="mb-2 flex items-center gap-2 text-base font-semibold text-[#1f1f1f]">
+    <slot name="titulo" />
+  </h3>
+  <p class="text-sm leading-6 text-[#4b5563]">{texto}</p>
 </section>

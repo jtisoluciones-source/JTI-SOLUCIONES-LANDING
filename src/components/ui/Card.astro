@@ -3,20 +3,22 @@ import PalomitaCirculo from "@/assets/icons/PalomitaCirculo.astro";
 const { titulo, descripcion, items } = Astro.props;
 ---
 
-<section class="bg-gray-50 rounded-xl p-[7%]">
-    <div>
-        <slot name="icono" />
-    </div>
-    <h2 class="font-bold mb-[4dvh] text-xl mt-[4dvh]">{titulo}</h2>
-    <p>{descripcion}</p>
-    <ul class="mt-[4dvh]">
-        {
-            items.map((item: any) => (
-                <li class="font-medium flex items-center gap-[6pt]">
-                    <PalomitaCirculo />
-                    {item}
-                </li>
-            ))
-        }
-    </ul>
+<section class="flex h-full flex-col rounded-[20px] border border-[#dfe3f0] bg-[#f6f6f7] p-5 shadow-sm transition-all duration-200 sm:p-6">
+  <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4c7ff] bg-[#f1ebff] text-[#7c4dff]">
+    <slot name="icono" />
+  </div>
+
+  <h2 class="mt-1 text-xl font-bold leading-tight text-[#111827] sm:text-[1.4rem]">{titulo}</h2>
+  <p class="mt-3 text-sm leading-6 text-[#4b5563] sm:text-[0.95rem]">{descripcion}</p>
+
+  <ul class="mt-5 space-y-3 text-sm text-[#1f2937] sm:text-[0.95rem]">
+    {
+      items.map((item: string) => (
+        <li class="flex items-start gap-2.5">
+          <PalomitaCirculo class="mt-0.5 shrink-0" />
+          <span>{item}</span>
+        </li>
+      ))
+    }
+  </ul>
 </section>
