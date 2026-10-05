@@ -24,9 +24,9 @@ import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
 
     <!-- Mobile hamburger -->
     <div class="lg:hidden flex items-center">
-      <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md inline-flex items-center justify-center text-stone-700 focus:outline-none focus:ring-2 focus:ring-sky-300">
-        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      <button id="mobile-menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md inline-flex items-center justify-center text-stone-700 focus:outline-none focus:ring-2 focus:ring-sky-300">
+        <svg id="icon-open" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
   </div>
@@ -43,36 +43,52 @@ import Logo from "@/assets/images/backgrounds/jti-coffee.astro";
   </div>
 
   <script>
-    (function(){
-      const btn = document.getElementById('mobile-menu-button');
+    const setMobileMenuOpen = (open: boolean) => {
+      const button = document.getElementById('mobile-menu-button');
       const panel = document.getElementById('mobile-menu');
       const iconOpen = document.getElementById('icon-open');
       const iconClose = document.getElementById('icon-close');
-      if(!(btn instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-      btn.addEventListener('click', ()=>{
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        panel.classList.toggle('hidden');
-        if(iconOpen instanceof HTMLElement && iconClose instanceof HTMLElement){
-          iconOpen.classList.toggle('hidden');
-          iconClose.classList.toggle('hidden');
-        }
-      });
-      // close on outside click
-      document.addEventListener('click', (e)=>{
-        if(!panel.classList.contains('hidden')){
-          const path = (e.composedPath && e.composedPath()) || [e.target];
-          const within = path.includes(panel) || path.includes(btn);
-          if(!within){
-            panel.classList.add('hidden');
-            btn.setAttribute('aria-expanded','false');
-            if(iconOpen instanceof HTMLElement && iconClose instanceof HTMLElement){
-              iconOpen.classList.remove('hidden');
-              iconClose.classList.add('hidden');
-            }
-          }
-        }
-      });
-    })();
+
+      if (!(button instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      panel.classList.toggle('hidden', !open);
+      iconOpen?.classList.toggle('hidden', open);
+      iconClose?.classList.toggle('hidden', !open);
+    };
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      if (target.closest('#mobile-menu-button')) {
+        const button = document.getElementById('mobile-menu-button');
+        const isOpen = button?.getAttribute('aria-expanded') === 'true';
+        setMobileMenuOpen(!isOpen);
+        return;
+      }
+
+      const panel = document.getElementById('mobile-menu');
+      if (!panel || panel.classList.contains('hidden')) return;
+
+      if (!panel.contains(target) || target.closest('#mobile-menu a')) {
+        setMobileMenuOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+
+      const button = document.getElementById('mobile-menu-button');
+      if (button?.getAttribute('aria-expanded') !== 'true') return;
+
+      setMobileMenuOpen(false);
+      button.focus();
+    });
+
+    document.addEventListener('astro:before-preparation', () => {
+      setMobileMenuOpen(false);
+    });
   </script>
 </nav>
